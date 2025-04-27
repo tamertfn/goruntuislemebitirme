@@ -1,4 +1,4 @@
-# version: '3.8'
+version: '3.8'
 services:
   yolov8_env:
     build: .
@@ -7,9 +7,9 @@ services:
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
     volumes:
-      - ./workspace:/workspace  # Bilgisayarindan veri gorme/iceri cikarma
+      - ./workspace:/workspace
     ports:
-      - "8888:8888"  # Istersen Jupyter icin
+      - "8888:8888"
     stdin_open: true
     tty: true
     command: /bin/bash
