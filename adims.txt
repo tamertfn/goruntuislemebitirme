@@ -1,0 +1,9 @@
+docker compose up --build
+
+docker exec -it yolov8_container /bin/bash
+
+nvidia-smi #if GPU SHOWS no problem
+
+./start.sh
+
+python3 train_yolov8.py
